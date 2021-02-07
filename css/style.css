@@ -379,9 +379,6 @@ transition: width 0.4s ease-in-out;
       background-position: right top;
       background-size: cover;
    }
-   .card-4{
-      background-position: right top;
-   }
    .card{
       padding: 30px;
       min-height: 300px;

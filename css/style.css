@@ -157,6 +157,7 @@ transition: width 0.4s ease-in-out;
    padding-top: 35px;
    background: #ccd5e6 url("../img/card/card-3.png") no-repeat top right 10%;
    background-size: 70%;
+   background-position-y: 80%;
    transition: background-size 1s ease;
 }
 .card-3:hover{
@@ -166,11 +167,12 @@ transition: width 0.4s ease-in-out;
    padding-top: 35px;
    padding-left: 25px;
    background: #ff4f52 url("../img/card/card-4.png") no-repeat top right;
+   background-position-y: 80%;
    background-size: 85%;
-   transition: background-size 1s ease;
+   transition: background-size 0.8s ease;
 }
 .card-4:hover{
-   background-size: 95%;
+   background-size: 100%;
 }
 .card-title{
    color: #262d33;

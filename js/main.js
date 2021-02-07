@@ -10,4 +10,20 @@ const swiper = new Swiper('.swiper-container', {
    scrollbar: {
      el: '.swiper-scrollbar',
    },
+   autoplay: {
+    delay: 5000,
+  },
  });
+
+ $( ".more" ).click(function() {
+  $( "#new-goods" ).slideToggle(0);
+})
+$( ".more" ).click(function() {
+  $( "#new-goods" ).toggleClass("d-none").addClass("d-flex");
+});
+$( ".more" ).click(function() {
+  $( "#new-goods" ).slideToggle(0);
+})
+$( ".more" ).click(function() {
+  $( "#new-2-goods" ).toggleClass("d-none").addClass("d-flex");
+});

@@ -8,25 +8,9 @@ body{
    margin: 0;
    font-family: "Lato",sans-serif;
 }
-.header{
+.header {
    padding: 15px 0;
-}
-.header__burger {
-   display: none;
-}
-.header__menu {
-}
-
-.header__list {
-   display: flex;
-   position: relative;
-   z-index: 2;
-}
-.header__list li{
-   margin: 0px 0px 0px 20px;
-}
-.header__link {
-}
+ }
 .navigation{
    list-style: none;
    padding: 0;
@@ -44,6 +28,18 @@ body{
    letter-spacing: 0.5px;
    position: relative;
    top: 0;
+}
+.navigation-link:after{
+display: block;
+content: "";
+height: 2px;
+width: 0%;
+background-color: #225384;
+transition: width 0.4s ease-in-out;
+}
+
+.navigation-link:hover:after{
+   width: 100%;
 }
 .navigation-link:hover{
    color: #4b5157;
@@ -66,6 +62,7 @@ body{
    cursor: pointer;
    position: relative;
    top: 0;
+   transition: 0.1s ease-in;
 }
 .button:hover{
    background-color: #4682B4;
@@ -82,11 +79,12 @@ body{
    min-height: 568px;
 }
  .slide-1 {
-   background: #B4D1E0 url('../img/image-064.png') no-repeat top right 30%;
+   background: #B4D1E0 url('../img/header slider/slide-1.png') no-repeat top right 30%;
+   background-size: contain;
 }
 .slide-2 {
-   background: #B4D1E0 url('../img/sweater_PNG19.png') no-repeat top 25% right 30%;
-   background-size: 30%;
+   background: #B4D1E0 url('../img/header slider/slide-2.png') no-repeat top right 30%;
+   background-size: contain;
 }
 .label{
    background-color: #3dc47e;
@@ -136,25 +134,43 @@ body{
    min-height: 370px;
    border-radius: 10px;
    padding: 60px 46px 80px 46px;
+   overflow: hidden;
 }
 .card-1{
-   background: #e3e2e3 url("../img/image-016.jpg") no-repeat top right;
-   background-size: cover;
+   background: #e2e0e1 url("../img/card/card-1.png") no-repeat top right;
+   background-size: 140%;
+   transition: background-size 1s ease;
 }
+.card-1:hover{
+   background-size: 150%;
+}
+
 .card-2{
-   background: #000 url("../img/image-117.jpg") no-repeat top right;
-   background-size: cover;
+   background: #000 url("../img/card/card-2.png") no-repeat top 30% right;
+   background-size: 100%;
+   transition: background-size 1s ease;
+}
+.card-2:hover{
+   background-size: 110%;
 }
 .card-3{
    padding-top: 35px;
-   background: #ccd5e6 url("../img/image-045.png") no-repeat top right 10%;
-   background-size: contain;
+   background: #ccd5e6 url("../img/card/card-3.png") no-repeat top right 10%;
+   background-size: 70%;
+   transition: background-size 1s ease;
+}
+.card-3:hover{
+   background-size: 80%;
 }
 .card-4{
    padding-top: 35px;
    padding-left: 25px;
-   background: #ff4f52 url("../img/image-118.png") no-repeat top right;
-   background-size: contain;
+   background: #ff4f52 url("../img/card/card-4.png") no-repeat top right;
+   background-size: 85%;
+   transition: background-size 1s ease;
+}
+.card-4:hover{
+   background-size: 95%;
 }
 .card-title{
    color: #262d33;
@@ -222,6 +238,16 @@ body{
    position: absolute;
    left: 18px;
    top: 18px;
+   overflow:hidden;
+}
+.goods-card img {
+   transition: all 1s ease-out;
+}
+#new-goods{
+   display: none;
+}
+.goods-card img:hover{
+   transform: scale(1.2);
 }
 .goods-title{
    font-family: "Roboto Slab",serif;
@@ -260,6 +286,18 @@ body{
    font-size: 14px;
    line-height: 20px;
 }
+.footer-menu-link:after{
+   display: block;
+   content: "";
+   height: 2px;
+   width: 0%;
+   background-color: #262d33;
+   transition: width 0.4s ease-in;
+}
+   
+.footer-menu-link:hover:after{
+   width: 100%;
+}
 .footer-menu-link:hover{
    color: #262d33;
    opacity: 0.8;
@@ -269,10 +307,13 @@ body{
    text-decoration: none;
    margin-left: 15px;
    position: relative;
-   top: 0;
 }
-.social-link:hover{
-   top: 3px;
+.social-link img {
+   transition: all 1s ease-out;
+}
+      
+.social-link img:hover{
+   transform: scale(1.2);
 }
 .footer-text{
    color: #e7d9ff;
@@ -319,6 +360,9 @@ body{
    .slider-nav{
       display: none;
    }
+   .slide-title-2, .slide-description-2{
+      color: #fff;
+   }
 }
 @media(max-width: 576px){
    .slide-title{
@@ -327,7 +371,7 @@ body{
       margin-bottom: 0;
    }
    .card{
-      background-position: left top;
+      background-position: right top;
    }
    .card-4{
       background-position: right top;
@@ -337,3 +381,4 @@ body{
       min-height: 300px;
    }
 }
+

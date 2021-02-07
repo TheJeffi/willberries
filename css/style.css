@@ -386,5 +386,8 @@ transition: width 0.4s ease-in-out;
       padding: 30px;
       min-height: 300px;
    }
+   .card-1:hover, .card-2:hover, .card-3:hover, .card-4:hover{
+      background-size: cover;
+   }
 }
 
